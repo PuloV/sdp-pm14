@@ -10,6 +10,7 @@ public:
 	int pop();
 	Stack();
 	~Stack();
+	bool is_empty() {return (top == nullptr);}
 
 private:
 
@@ -56,13 +57,11 @@ int Stack::pop()
 
 Stack::~Stack()
 {
-	int value;
-	do
+	while (!this->is_empty());
 	{
-		value=this->pop();
+		this->pop();
 	}
 
-	while (value!=-1);
 
 }
 
@@ -78,14 +77,12 @@ int main()
 		cin>>value;
 	}
 
-	int temp = myS.pop();
 
-	while(temp != -1)
+
+	while (!myS.is_empty())
 	{
-		cout<<temp<<" ";
-		temp = myS.pop();
+		cout<<myS.pop()<<" ";
 	}
-
 	system("pause");
 	return 0;
 }
