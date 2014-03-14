@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Data structures - C++ Tutorials</title>
+</head>
+<body><ol>
+<li> Какво е стурктура , какво е клас , каква е разликата м-ду 2-те
+  <ul>
+    <li>
+      <p>
+      "<a href="http://www.cplusplus.com/doc/tutorial/structures/">A data structure is a group of data elements grouped together under one name. These data elements, known as members, can have different types and different lengths.  ... </a>"
+      </p>
+    </li>
+
+    <li>
+      <p>
+      "<a href="http://www.cplusplus.com/doc/tutorial/clases/">Classes are an expanded concept of data structures: like data structures, they can contain data members, but they can also contain functions as members  ... </a>" <br />
+      <ul>
+      <li><code>private</code> : members of a class are accessible only from within other members of the same class (or from their<i>"friends"</i>).</li>
+      <li><code>protected</code> : members are accessible from other members of the same class (or from their <i>"friends"</i>), but also from members of their derived classes.</li>
+      <li><code>public</code> : members are accessible from anywhere where the object is visible.</li>
+      </ul>
+
+      </p>
+    </li>
+  </ul>
+</li>
+
+<li> ВЕЛИКАТА ЧЕТВОРКА ! () <br />
+<dfn><a href="http://www.cplusplus.com/doc/tutorial/classes2/">Special member functions </a></dfn> are member functions that are implicitly defined as member of classes under certain circumstances. There are six:<br>
+<br>
+<table class="boxed"><tbody><tr><th>Member function</th><th>typical form for class <code>C</code>:</th></tr>
+<tr><td><a href="#default_constructor">Default constructor</a></td><td><code>C::C();</code></td></tr>
+<tr><td><a href="#destructor">Destructor</a></td><td><code>C::~C();</code></td></tr>
+<tr><td><a href="#copy_constructor">Copy constructor</a></td><td><code>C::C (const C&amp;);</code></td></tr>
+<tr><td><a href="#copy_assignment">Copy assignment</a></td><td><code>C&amp; operator= (const C&amp;);</code></td></tr>
+</tbody></table>
+<br>
+</li>
+
+
+<li>"<a href="http://www.cplusplus.com/reference/stack/stack/">Какво е Стек ? </a>
+  <p>"Stacks are a type of container adaptor, specifically designed to operate in a LIFO context (last-in first-out), where elements are inserted and extracted only from one end of the container." </p> <br />
+  <p>Основни методи и тяхното действие (без 4-ката)  : <ul>
+  <li>push</li>
+  <li>pop</li>
+  <li>is_empty? (a.k.a. empty )</li>
+  <span style="text-decoration:underline">които не сме разглеждали но  имат тривиална реализация </span>
+  <li>size</li>
+  <li>top</li>
+  </ul></p>
+</li>
+</ol></body></html>
