@@ -6,12 +6,19 @@
 След това да се въведат имената на 2 спирки и да се пресметне времето за пътуване , спирките и автобусите които човек трябва да смени.
 
 ####Помощни материали
-	* [A star algorithm](http://en.wikipedia.org/wiki/A*_search_algorithm)
-	* [Dijkstra's algorithm](http://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)
-	* [Bellman Ford algorithm](http://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm)
+
+* [A star algorithm](http://en.wikipedia.org/wiki/A*_search_algorithm)
+
+* [Dijkstra's algorithm](http://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)
+
+* [Bellman Ford algorithm](http://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm)
 
 ####Да се реализира
-	* Добавяне на автобус
-	* Добавяне на спирка
-	* ``Автобус№к`` спира на спирка ``Х``
-	* Намери път от ``X`` до ``Y`` който да се кешира
+
+* Добавяне на автобус
+
+* Добавяне на спирка
+
+* ``Автобус№к`` спира на спирка ``Х``
+
+* Намери път от ``X`` до ``Y`` който да се кешира
