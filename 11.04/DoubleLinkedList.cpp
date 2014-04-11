@@ -77,6 +77,40 @@ public:
 		this->first = new_node;
 		this->size ++;
 	}
+	Node * pop_nth(int pos){
+		Node *loop = this->first;
+		while(pos){
+			pos--;
+			loop = loop->next;
+		}
+		return loop;
+	}
+
+	void remove (int pos){
+		Node * to_delete = this->pop_nth(pos);
+		to_delete->prev->next = to_delete->next;
+		to_delete->next->prev = to_delete->prev;
+		delete to_delete;
+		this->size--;
+	}
+	void remove(int i , int j){
+		Node * first_to_delete = this->pop_nth(i);
+		Node *last_before_delete = first_to_delete->prev;
+		for(int k=0 ; k <=j-i ; k++)
+		{
+			Node * to_delete = first_to_delete;
+			first_to_delete = first_to_delete->next;
+			delete to_delete;
+			this->size--;
+		}
+		last_before_delete->next = first_to_delete;
+		first_to_delete->prev = last_before_delete;
+	}
+
+	T operator[](int pos){
+		Node * returned = this->pop_nth(pos);
+		return returned->value;
+	}
 
 };
 
@@ -87,5 +121,8 @@ int main()
 	myDLL.push_back(2);
 	myDLL.push_back(3);
 	myDLL.insert_after(1,8);
+	myDLL.remove(1 , 2);
+	cout<<myDLL[0]<<endl;
+	cout<<myDLL.operator[](1);
 	return 0;
 }
