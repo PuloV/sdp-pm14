@@ -58,6 +58,34 @@ public:
 	~Btree();
 	void Insert(T element);
 	bool Find(T element);
+	void DFS(){
+		stack<Node *> dfs;
+		dfs.push(root);
+		Node * current ;
+		while(dfs.size()!= 0){
+			current = dfs.top();
+			dfs.pop();
+			if(current->right != nullptr)
+				dfs.push(current->right);
+			if(current->left != nullptr)
+				dfs.push(current->left);
+			cout<<current->value<<"  " ;
+		}
+	}
+	void BFS(){
+		queue<Node *> BFS;
+		BFS.push(root);
+		Node * current ;
+		while(BFS.size()!= 0){
+			current = BFS.front();
+			BFS.pop();
+			if(current->left != nullptr)
+				BFS.push(current->left);
+			if(current->right != nullptr)
+				BFS.push(current->right);
+			cout<<current->value<<"  " ;
+		}
+	}
 };
 
 template <typename T>
@@ -150,4 +178,4 @@ void main()
 		cout << bt.Find(C) << " " << C << endl;
 	}
 
-}
+	}
