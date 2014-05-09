@@ -1,5 +1,5 @@
 #include <iostream>
-#include<list>
+#include<vector>
 #include <stack>
 #include <queue>
 using namespace std;
@@ -10,7 +10,7 @@ class Tree
 	struct Node
 	{
 		T value;
-		list<Node*> children;
+		vector<Node*> children;
 	};
 	Node * root;
 	Node * Find(const T& t)
@@ -29,12 +29,12 @@ class Tree
 			{
 				return current;
 			}
-			for(list<Node*>::iterator it = current->children.begin();it != current->children.end(); ++it)
+			/*for(vector<Node*>::iterator it = current->children.begin();it != current->children.end(); ++it)
 			{
 				s.push(*it);
-			}
-			/*for(int i=0 ; i< (current->children.size()) ;i++)
-				s.push(current->children[i]);*/
+			}*/
+			for(int i=0 ; i< (current->children.size()) ;i++)
+				s.push(current->children[i]);
 		}
 		return nullptr;
 	}
@@ -61,9 +61,9 @@ Tree<T>::~Tree()
 	{
 		Node* current = s.top();
 		s.pop();
-		for(list<Node*>::iterator it = current->children.begin();it != current->children.end(); ++it)
+		for(int i = 0 ; i< (current->children).size() ;i++)
 		{
-			s.push(*it);
+			s.push(current->children[i]);
 		}
 		delete current;
 	}
@@ -101,10 +101,10 @@ void Tree<T>::Print()
 	{
 		Node * tmp=q.front();
 		q.pop();
-		for (list<Node*>::iterator it = tmp->children.begin();it != tmp->children.end(); ++it)
+		for (int i = 0 ; i< (tmp->children).size() ;i++ )
 		{
-			q.push(*it);
-			cout<<(*it)->value<<" ";
+			q.push(tmp->children[i]);
+			cout<<tmp->children[i]->value<<" ";
 		}
 		cout << endl;
 	}
