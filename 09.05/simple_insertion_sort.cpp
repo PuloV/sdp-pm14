@@ -27,7 +27,7 @@ int main()
 		temp.ymd=ymd;
 		strcpy(temp.name,name);
 		myChoco.push_back(temp);
-		int j = i;*/
+		int j = i;
 		while(j>0 && myChoco[j].ymd > myChoco[j-1].ymd){
 			swap(myChoco[j-1],myChoco[j]);
 			j--;
