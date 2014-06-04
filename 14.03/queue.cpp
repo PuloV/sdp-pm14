@@ -26,6 +26,7 @@ public:
 }
 
   const Queue<T> &operator=(Queue &rhs){
+  while(!this->is_empty()) this->pop();
     if(rhs.begin == nullptr) return *(new Queue);
     Node * top_element =rhs.begin ;
     while(top_element != nullptr){
